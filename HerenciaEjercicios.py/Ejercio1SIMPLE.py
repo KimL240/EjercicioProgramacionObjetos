@@ -5,8 +5,8 @@ class Empelados:
         self.nombre=nombre
         self.salario=salario
     def mostrar_informacion(self):
-        print(f'Nombre{self.nombre}')
-        print(f'Salario{self.salario}')
+        print(f'Nombre:{self.nombre}')
+        print(f'Salario : ${self.salario:.2f}')
 
 
 class Gerente(Empelados):
@@ -14,7 +14,7 @@ class Gerente(Empelados):
         Empelados.__init__(self,nombre, salario)
         self.departamento=departamento
     def mostrar_informacion(self):
-         print(f'Nombre gerente {self.nombre} Departamento {self.departamento}')
+         print(f'Departamento {self.departamento}')
     
-Empelados1=Gerente('Jose martinez',2500,10)
-Empelados1.mostrar_informacion()
+gerente=Gerente('Jose Martinez',2500,'ventas')
+gerente.mostrar_informacion()
